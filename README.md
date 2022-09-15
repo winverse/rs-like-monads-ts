@@ -2,7 +2,7 @@
 > Rust style monads in Typescript
 
 # Option
-Sometimes called `Maybe` in other languages. Maybe a => <Nothing, Just a>
+Sometimes called `Maybe` in other languages. [Maybe](https://hackage.haskell.org/package/base-4.17.0.0/docs/Data-Maybe.html) a => <Nothing, Just a>
 
 ```typescript
 import * as O from './option';
@@ -16,7 +16,7 @@ console.log(O.map(arr, (a) => a * 2)); // { _tag: 'Some', value: 10 }
 ```
 
 # Result
-Sometimes called `Either` in other languages. Either [a b] => <Lefts [a], Rights [b]>
+Sometimes called `Either` in other languages. [Either](https://hackage.haskell.org/package/base-4.17.0.0/docs/Data-Either.html) a b => <Left a, Right b>
 
 ```typescript
 import * as R from './result'
