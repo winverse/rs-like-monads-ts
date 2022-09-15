@@ -1,4 +1,4 @@
-# rs-like-monads-ts
+# rs-style-monads-ts
 > Rust style monads in Typescript
 
 # Option
@@ -14,6 +14,12 @@ const b = O.Some(5);
 console.log(O.map(arr, (a) => a * 2)); // { _tag: 'Some', value: 10 }
 
 ```
+## Methods
+- isSome
+- isNone
+- unwrapOrDefault 
+- map
+- mapOrElse
 
 # Result
 Sometimes called `Either` in other languages. [Either](https://hackage.haskell.org/package/base-4.17.0.0/docs/Data-Either.html) a b => <Left a, Right b>
@@ -49,6 +55,19 @@ const main = () => {
   R.unwrapOrDefault(result, (e) => handleError(e)); // error handling 
 };
 ```
+
+## Methods (exists in rust)
+- isOk 
+- isErr
+- unwrapOrDefault
+- unwrapOrElse
+- map
+- mapOrElse
+
+## Ts Methods (Not exists in rust)
+- keepOk
+- flat
+- flatMap
 
 # Rust Reference 
 - [Option](https://doc.rust-lang.org/std/option/enum.Option.html#)
